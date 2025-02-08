@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SortSight</title>
+
+    <!-- Add a link to an external stylesheet -->
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- Add FontAwesome for icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="array-inputs">
+                <p>Size of the array:</p>
+                <input id="a_size" type="range" min=20 max=150 step=1 value=80>
+                <p>Speed of the algorithm:</p>
+                <input id="a_speed" type="range" min=1 max=5 step=1 value=4>
+                <button id="a_generate" class="primary-btn">Generate New Array!</button>
+            </div>
+
+            <div class="header_right">
+                <p class="nav-heading">
+                    <i class="fas fa-sort"></i> Sorting Visualizer
+                </p>
+
+                <div class="algos">
+                    <button class="algo-btn">Bubble</button>
+                    <button class="algo-btn">Selection</button>
+                    <button class="algo-btn">Insertion</button>
+                    <button class="algo-btn">Merge</button>
+                    <button class="algo-btn">Quick</button>
+                    <button class="algo-btn" style="margin-right: 0px;">Heap</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Status Message Section -->
+    <div id="status-message">
+        <p id="status-text">Click on a sorting algorithm to begin!</p>
+    </div>
+
+    <!-- Loader Section -->
+    <div id="loader" style="display: none;">
+        <p>Sorting in progress...</p>
+        <div class="spinner"></div>
+    </div>
+
+    <section>
+        <div id="Info_Cont1">
+            <h3>TIME COMPLEXITY</h3>
+
+            <div class="Complexity_Containers" id="Time_Complexity_Types_Container">
+                <div class="Pair_Definitions">
+                    <p class="Sub_Heading">Worst case:</p>
+                    <p id="Time_Worst"></p>
+                </div>
+
+                <div class="Pair_Definitions">
+                    <p class="Sub_Heading">Average case:</p>
+                    <p id="Time_Average"></p>
+                </div>
+
+                <div class="Pair_Definitions">
+                    <p class="Sub_Heading">Best case:</p>
+                    <p id="Time_Best"></p>
+                </div>
+            </div>
+        </div>
+
+        <div id="array_container"></div>
+
+        <div id="Info_Cont2">
+            <h3>SPACE COMPLEXITY</h3>
+
+            <div class="Complexity_Containers" id="Space_Complexity_Types_Container">
+                <div class="Pair_Definitions">
+                    <p class="Sub_Heading">Worst case:</p>
+                    <p id="Space_Worst"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Developed by Mehak Kanyal | <a href="https://github.com/mehakkanyal16" target="_blank">GitHub</a></p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="./scripts/main.js"></script>
+    <script src="./scripts/visualizations.js"></script>
+    <script src="./scripts/bubble_sort.js"></script>
+    <script src="./scripts/selection_sort.js"></script>
+    <script src="./scripts/insertion_sort.js"></script>
+    <script src="./scripts/merge_sort.js"></script>
+    <script src="./scripts/quick_sort.js"></script>
+    <script src="./scripts/heap_sort.js"></script>
+</body>
+</html>
